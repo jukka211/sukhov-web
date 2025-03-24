@@ -427,6 +427,7 @@ html, body {
   align-items: center;
   background-color: #000;
   height: fit-content;
+  gap: 10px;
 }
 
 /* Remove default margins on anchors */
@@ -474,6 +475,11 @@ html, body {
 .contact-info {
   text-align: center;
 }
+
+
+
+
+
 @media (max-width: 768px) {
   #layer1 video {
     height: 100%;
@@ -526,7 +532,9 @@ html, body {
     }
     .menu__item {
       margin-top: 0px ;
-      padding: 0px 6px;  /* Optional: add some vertical padding for touch devices */
+      padding: 0px 6px; 
+      font-size: 13px;
+  line-height: 13px; /* Optional: add some vertical padding for touch devices */
     }
 .text {
   width: 100%;
