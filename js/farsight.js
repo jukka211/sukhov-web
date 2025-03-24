@@ -80,10 +80,8 @@ const farsight = (() => {
     console.log(target);
     TweenLite.to(window, 2, {
       scrollTo: target,
-      delay: 0.5, // adds a 0.5 second pause before the scroll begins
     });
   };
-  
 
   return {
     render: function() {
@@ -101,7 +99,7 @@ const farsight = (() => {
       zoomScene();
 
       // zooming
-      var throttledZoom = _.throttle(zoomScene, 20);
+      var throttledZoom = _.throttle(zoomScene, 30);
 
       window.addEventListener('scroll', throttledZoom);
 
