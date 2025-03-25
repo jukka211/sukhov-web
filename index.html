@@ -16,40 +16,29 @@
 
     <div class="links-container">
         <a href="#layer1">back</a>
+      
         <div class="inner-cont">
-        <a href="#">e-mail</a>
-        <a href="#layer9">ⓘ</a>
-        <a href="">inst</a>
-    </div>
-    <a href="#layer2">next</a>
-    </div>
-    <header class="header">
+          <a href="#">e-mail</a>
+          <a href="#layer9">ⓘ</a>
+          <a href="">inst</a>
+        </div>
+      
+        <a href="#layer2">next</a>
+      </div>
+      
+      <header class="header">
         <nav class="menu">
-            <a href="#layer1" class="menu__item">gerhardkirchschleager.at</a>
-    
-            <a href="#layer2" class="menu__item">ARDC Magazine</a>
-    
-            <a href="#layer3" class="menu__item">öh Kunstuni Linz</a>
-    
-            <a href="#layer4" class="menu__item">P5js Sketches</a>
-    
-            <a href="#layer5" class="menu__item">FPS Archive</a>
-      
-            <a href="#layer6" class="menu__item">Languages Book</a>
-            <a href="#layer7" class="menu__item">Future Displays</a>
-      
-         
-      
-            <a href="#layer8" class="menu__item">AI Tales</a>
-      
-      
-    
-    
-         
+          <a href="#layer1" class="menu__item">gerhardkirchschleager.at</a>
+          <a href="#layer2" class="menu__item">ARDC Magazine</a>
+          <a href="#layer3" class="menu__item">öh Kunstuni Linz</a>
+          <a href="#layer4" class="menu__item">P5js Sketches</a>
+          <a href="#layer5" class="menu__item">FPS Archive</a>
+          <a href="#layer6" class="menu__item">Languages Book</a>
+          <a href="#layer7" class="menu__item">Future Displays</a>
+          <a href="#layer8" class="menu__item">AI Tales</a>
         </nav>
-     
-        
-    </header>
+      </header>
+      
 
    
 
@@ -58,15 +47,23 @@
             <div class="scene">
 
                 <div id="layer1" class="layer" data-depth="0">
-                    <a href="https://sukhov.xyz/project-01/project-01.html"> <video autoplay loop muted playsinline width="1920" height="1080">
+                    <a href="https://sukhov.xyz/project-01/project-01.html" class="video-desktop">
+                      <video autoplay loop muted playsinline width="1920" height="1080">
                         <source src="video-02.mp4" type="video/mp4">
                         Your browser does not support the video tag.
-                    </video></a>
-            
-              
-                </div>
+                      </video>
+                    </a>
+                  
+                    <a href="https://sukhov.xyz/project-01/project-01.html" class="video-mobile">
+                      <video autoplay loop muted playsinline width="1920" height="1080">
+                        <source src="video-01.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </a>
+                  </div>
+                  
                 
-                <div id="layer2" class="layer" data-depth="700" width="1920" height="1080">
+                <div id="layer2" class="layer" data-depth="700">
                     <a href="https://sukhov.xyz/project-02/project-02.html"><video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
                         <source src="ardc-preview.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -85,7 +82,7 @@
                     </video> </a>
                 </div>
 
-                <div id="layer5" class="layer" data-depth="2800" width="1920" height="1080">
+                <div id="layer5" class="layer" data-depth="2800" >
                     <a href="https://sukhov.xyz/project-05/project-05.html">  <video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
                         <source src="fps-new-preview.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -123,7 +120,36 @@
               
         </div>
     </div>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          let lazyVideos = Array.from(document.querySelectorAll("video.lazy-video"));
+          
+          if ("IntersectionObserver" in window) {
+            let videoObserver = new IntersectionObserver((entries, observer) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  const video = entry.target;
+                  // Set the src attribute from data-src to start loading the video
+                  video.src = video.dataset.src;
+                  video.classList.add("loaded");
+                  videoObserver.unobserve(video);
+                }
+              });
+            });
+            
+            lazyVideos.forEach(video => {
+              videoObserver.observe(video);
+            });
+          } else {
+            // Fallback for browsers that do not support IntersectionObserver
+            lazyVideos.forEach(video => {
+              video.src = video.dataset.src;
+              video.classList.add("loaded");
+            });
+          }
+        });
+      </script>
+      
     <div class="scene__depth"></div>
 
     <script src="js/libs/underscore-min.js"></script>
