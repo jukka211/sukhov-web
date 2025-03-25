@@ -478,11 +478,26 @@ html, body {
 
 
 
+.video-desktop {
+  display: block;
+}
 
+.video-mobile {
+  display: none;
+}
 
 @media (max-width: 768px) {
+
+  .video-desktop {
+    display: none;
+  }
+
+  .video-mobile {
+    display: block;
+  }
+
   #layer1 video {
-    height: 100%;
+    height: 100vh;
     width: auto;
   }
   .layer img {
