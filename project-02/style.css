@@ -1,0 +1,256 @@
+body {
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    background-color: #000000;
+  }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 0px;
+      width: 100%;
+    
+      margin: 0;
+    }
+
+    .grid-container-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 0px;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+
+  .grid-container-3 {
+display: grid;
+grid-template-columns: 1fr;
+grid-auto-rows: auto;
+gap: 0;
+width: 100vw;
+margin: 0;
+padding: 0;
+}
+
+    .grid-item {
+   
+      padding: 0px;
+      text-align: center;
+    }
+    .grid-item img {
+   width: 100%;
+    height: 100%;
+   
+      display: block;
+      margin: 0;
+
+      object-fit: cover;
+    }
+    .grid-item video {
+      width: 100%;
+      height: 100%;
+   
+      display: block;
+      margin: 0;
+
+      object-fit: cover;
+    }
+    html, body {
+      background-color: #000000;
+      justify-content: center;
+      align-items: center;
+    
+    }
+    
+    .header {
+      position: fixed;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width:55%;
+      padding: 0;
+      z-index: 999;
+      text-align: center;
+    }
+    
+    .menu {
+      text-align: center;
+      display: flex;
+      justify-content: space-between; /* distributes items evenly */
+      gap: 0;
+      align-items: center;
+      width: 100%; /* or any width you need */
+      margin: 0;
+      padding: 0px 9px;
+      background-color: #000000;
+    }
+    
+    .menu__item {
+      /* Remove float and block settings */
+      text-decoration: none;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 1.4vh;
+      line-height: 1.5vh;
+      letter-spacing: -0.1px;
+      box-shadow: 0px 0px 2px #ffffff25;
+      margin: 0; /* remove any default margin */
+      padding: 0 0px;
+      
+    }
+    
+    .menu__item:hover,
+    .menu__item.menu__item--active {
+      color: #000000;
+      background-color: #ffffff;
+    }
+    
+    
+    .links-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 13px;
+      position: fixed;
+      z-index: 999;
+      top: 5px;
+      left: 50%;                /* Position left at 50% of viewport */
+      transform: translateX(-50%); /* Shift left by half its own width */
+      width: 55%;
+      background-color: black;
+      /* Using auto height or a fixed height if desired */
+      height: fit-content;
+    }
+    
+    .inner-cont {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: #000;
+      height: fit-content;
+      gap: 10px;
+    }
+    
+    /* Remove default margins on anchors */
+    .links-container a {
+      display: inline-block; /* Ensure consistent sizing behavior */
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      padding: 0 6px; /* shorthand for left/right padding */
+      transition: 0.3s;
+      background-color: #000;
+     
+    }
+    
+    .links-container a:hover {
+      color: #000;
+      background-color: #fff;
+    }
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Evenly distributes space between children */
+  align-items: flex-start;
+  width: 100%;
+  padding: 8px;
+  padding-top: 6px;
+
+  box-sizing: border-box;
+  font-family: Arial;
+  font-weight: bold;
+  margin-bottom: 0;
+  border-top: 0.75px solid black;
+  color: #ffffff;
+  font-size: 1.4vh;
+  line-height: 1.6vh;
+}
+/* General styling for each section */
+.section {
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  box-sizing: border-box;
+
+
+}
+
+/* First and second sections: two titles arranged in a row */
+.title-row {
+  display: flex;
+  flex-direction: column;
+ 
+  align-items: left;
+}
+
+
+
+/* Third section: two texts displayed in two columns */
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 5px;
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    position: fixed;
+    bottom: 5px;
+    left: 0%;
+    transform: translateX(0%);
+    width:100%;
+    padding: 0;
+    z-index: 999;
+    text-align: center;
+  }
+  .menu {
+    flex-wrap: wrap;         /* Allow items to wrap onto next lines */
+    justify-content:space-between;
+    row-gap: 4px;
+    padding: 0;
+  }
+  .menu__item {
+    margin-top: 0px ;
+    padding: 0px 10px; 
+    font-size: 13px;
+line-height: 13px; /* Optional: add some vertical padding for touch devices */
+  }
+
+.links-container {
+
+width: 100%;
+
+}
+.container {
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 2%;
+    padding: 10px;
+  }
+  .section {
+    width: 100%;
+    padding-bottom: 10px;
+    
+  }
+  /* For better readability on mobile, switch to one column */
+  .two-columns {
+    grid-template-columns: 1fr;
+  }
+  .top, .bottom {
+font-family:Beth-Ellen;
+font-size: 13px;
+line-height: 14.5px;
+position: fixed;
+
+}
+}
