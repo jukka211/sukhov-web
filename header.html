@@ -1,0 +1,87 @@
+<style>
+    .header {
+      position: fixed;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width:55%;
+      padding: 0;
+      z-index: 999;
+      text-align: center;
+    }
+    
+    .menu {
+      text-align: center;
+      display: flex;
+      justify-content: space-between; /* distributes items evenly */
+      gap: 0;
+      align-items: center;
+      width: 100%; /* or any width you need */
+      margin: 0;
+      padding: 0px 9px;
+      background-color: #000000;
+    }
+    
+    .menu__item {
+      /* Remove float and block settings */
+      text-decoration: none;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 1.4vh;
+      line-height: 1.5vh;
+      letter-spacing: -0.1px;
+      box-shadow: 0px 0px 2px #ffffff25;
+      margin: 0; /* remove any default margin */
+      padding: 0 0px;
+      
+    }
+    
+    .menu__item:hover,
+    .menu__item.menu__item--active {
+      color: #000000;
+      background-color: #ffffff;
+    }
+    @media (max-width: 768px) {
+  .header {
+    position: fixed;
+    bottom: 5px;
+    left: 0%;
+    transform: translateX(0%);
+    width:100%;
+    padding: 0;
+    z-index: 999;
+    text-align: center;
+  }
+  .menu {
+    flex-wrap: wrap;         /* Allow items to wrap onto next lines */
+    justify-content:space-between;
+    row-gap: 4px;
+    padding: 0;
+  }
+  .menu__item {
+    margin-top: 0px ;
+    padding: 0px 10px; 
+    font-size: 13px;
+line-height: 13px; /* Optional: add some vertical padding for touch devices */
+  }
+
+.links-container {
+
+width: 100%;
+
+}}
+</style>
+
+<header class="header">
+  <nav class="menu">
+    <a href="https://sukhov.xyz/project-01/project-01.html" class="menu__item">gerhardkirchschleager.at</a>
+    <a href="https://sukhov.xyz/project-02/project-02.html" class="menu__item">ARDC Magazine</a>
+    <a href="https://sukhov.xyz/project-03/project-03.html" class="menu__item">öh Kunstuni Linz</a>
+    <a href="https://sukhov.xyz/project-04/project-04.html" class="menu__item">P5js Sketches</a>
+    <a href="https://sukhov.xyz/project-05/project-05.html" class="menu__item">FPS Archive</a>
+    <a href="https://sukhov.xyz/project-06/project-06.html" class="menu__item">Languages Book</a>
+    <a href="https://sukhov.xyz/project-07/project-07.html" class="menu__item">Future Displays</a>
+    <a class="menu__item">Metamorphose</a>
+  </nav>
+</header>
