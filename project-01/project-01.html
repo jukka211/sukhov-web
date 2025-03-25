@@ -25,18 +25,9 @@
     <a href="https://sukhov.xyz/project-03/project-03.html">next</a>
   </div>
   
-  <header class="header">
-    <nav class="menu">
-      <a href="https://sukhov.xyz/project-01/project-01.html" class="menu__item">gerhardkirchschleager.at</a>
-      <a href="https://sukhov.xyz/project-02/project-02.html" class="menu__item">ARDC Magazine</a>
-      <a href="https://sukhov.xyz/project-03/project-03.html" class="menu__item">öh Kunstuni Linz</a>
-      <a href="https://sukhov.xyz/project-04/project-04.html" class="menu__item">P5js Sketches</a>
-      <a href="https://sukhov.xyz/project-05/project-05.html" class="menu__item">FPS Archive</a>
-      <a href="https://sukhov.xyz/project-06/project-06.html" class="menu__item">Languages Book</a>
-      <a href="https://sukhov.xyz/project-07/project-07.html" class="menu__item">Future Displays</a>
-      <a href="https://sukhov.xyz/project-08/project-08.html" class="menu__item">AI Tales</a>
-    </nav>
-  </header>
+ <div id="header"></div>
+
+
 
   
 <div class="grid-container-3" id="video-m">
@@ -109,5 +100,16 @@
     </div>
   </div>
 </div>
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    fetch('https://sukhov.xyz/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      })
+      .catch(err => console.error('Error loading header:', err));
+  });
+</script>
+
   </body>
   </html>
