@@ -494,11 +494,14 @@ html, body {
 
   .video-mobile {
     display: block;
+    height: 100vh;
+    width: auto;
   }
 
   #layer1 video {
     height: 100vh;
     width: auto;
+    object-fit: cover;
   }
   .layer img {
 
