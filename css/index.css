@@ -485,7 +485,10 @@ html, body {
 .video-mobile {
   display: none;
 }
+#layer1 video {
 
+     border-radius: 0px;
+  }
 @media (max-width: 768px) {
 
   .video-desktop {
@@ -496,12 +499,14 @@ html, body {
     display: block;
     height: 100vh;
     width: auto;
+    border-radius: 0px;
   }
 
   #layer1 video {
     height: 100vh;
     width: auto;
     object-fit: cover;
+     border-radius: 0px;
   }
   .layer img {
 
