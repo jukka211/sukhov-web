@@ -487,9 +487,7 @@ html, body {
 }
 
 .project {
-  position: fixed;
-  top: 82vh;
-  left: 11vw;
+   position: relative;
   font-size: 1.6vh;
   line-height: 1vh;
   letter-spacing: -0.2px;
