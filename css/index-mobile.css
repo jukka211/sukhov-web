@@ -1,9 +1,14 @@
 @font-face {
-  font-family: 'Arial Black';
-  src: url('ArchivoBlack-Regular.ttf') format('truetype');
+  font-family: "Archivo Black";
+  src: url("ArchivoBlack-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
-@media (max-width: 768px) {
 
+@media (max-width: 768px) {
+body {
+font-family: "Archivo Black";
+}
   .video-desktop {
     display: none;
   }
@@ -109,25 +114,7 @@
       top: 81vh;
      }
      
-.text {
-  width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 26px;
-  color: #ffffff;
-  text-align: center;
-  padding-left: 10px;
-  padding-right: 10px;
-  text-decoration: none;
-  transform-style: preserve-3d;
-      perspective: 800px;
-}
-.links-container {
- 
-  width: 100%;
 
-}
 
 
 
