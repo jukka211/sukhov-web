@@ -438,7 +438,7 @@ body {
   font-style: normal;
   font-size: 20vh;
   line-height: 16vh;
-  letter-spacing: -5px;
+  letter-spacing: -0.5px;
   margin: 0;   /* remove any default margin */
   padding: 0;
   display: none;
