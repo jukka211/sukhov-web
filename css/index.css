@@ -355,16 +355,16 @@ body {
   perspective: 1000px;
 }
 .layer img {
-
-width: 100%;
-  height: auto;
-object-fit: cover;
-
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;      /* full viewport width */
+  height: 100vh;     /* full viewport height */
+  object-fit: cover; /* crop/scale to fill without distortion */
   transform-style: preserve-3d;
-
-
-  
+  object-position: 0 20%;
 }
+
 
 
 
