@@ -7,13 +7,7 @@
   /* Chrome 19+, Safari 6+, Safari 6+ iOS */
 }
 
-@font-face {
-  font-family: "Archivo Black";
-  src:
-    url("../ArchivoBlack-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 .container {
   color: #ffffff;
@@ -24,9 +18,11 @@
   top: 10px;
   font-size: 1.6vh;
   line-height: 1.6vh;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.1px;
   z-index: 999;
-  font-family: "Archivo Black";
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 900;
+  font-style: normal;
   mix-blend-mode: difference;
 }
 
@@ -61,7 +57,9 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 4vh;
-  font-family: "Archivo Black";
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 900;
+  font-style: normal;
   color: #ff0000;
 }
 
@@ -71,7 +69,9 @@
 }
 
 p {
-  font-family: "Archivo Black";
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 900;
+  font-style: normal;
 }
 
 .color {
@@ -433,7 +433,9 @@ body {
 .menu__item {
   /* Remove float and block settings */
   text-decoration: none;
-  font-family: "Archivo Black";
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 900;
+  font-style: normal;
   font-size: 20vh;
   line-height: 16vh;
   letter-spacing: -5px;
@@ -453,7 +455,7 @@ body {
   position: relative;
   font-size: 1.6vh;
   line-height: 1vh;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.1px;
 }
 
 .video-desktop {
@@ -466,5 +468,7 @@ body {
 
 body {
   background-color: white;
-  font-family: "Archivo Black";
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 900;
+  font-style: normal;
 }
