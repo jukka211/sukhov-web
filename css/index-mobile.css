@@ -1,4 +1,7 @@
-
+@font-face {
+  font-family: 'Arial Black';
+  src: url('ArchivoBlack-Regular.ttf') format('truetype');
+}
 @media (max-width: 768px) {
 
   .video-desktop {
