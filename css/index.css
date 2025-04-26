@@ -356,9 +356,9 @@ body {
 }
 .layer img {
 
-
-  height: 100%;
-object-fit: contain;
+width: 100%;
+  height: auto;
+object-fit: cover;
 
   transform-style: preserve-3d;
 
@@ -585,11 +585,3 @@ body {
   background-color: white;
 }
 
-.backimg img{
-  height: 100%;
-
-  position: fixed;
-  top:0;
-  z-index: 999;
-  mix-blend-mode: multiply;
-}
