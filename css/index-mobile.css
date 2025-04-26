@@ -1,13 +1,10 @@
-@font-face {
-  font-family: "Archivo Black";
-  src: url("../ArchivoBlack-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 @media (max-width: 768px) {
 body {
-font-family: "Archivo Black";
+font-family: "neue-haas-grotesk-display", sans-serif;
+font-weight: 900;
+font-style: normal;
 }
   .video-desktop {
     display: none;
