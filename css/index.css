@@ -11,7 +11,10 @@
 }
 
 
-
+@font-face {
+  font-family: 'Arial Black';
+  src: url('ArchivoBlack-Regular.ttf') format('truetype');
+}
 
 
 
@@ -88,10 +91,7 @@
 
 
 
-@font-face {
-  font-family: 'Arial Black';
-  src: url('ArchivoBlack-Regular.ttf') format('truetype');
-}
+
 .color {
   filter: none;
   -webkit-filter: grayscale(0%);
